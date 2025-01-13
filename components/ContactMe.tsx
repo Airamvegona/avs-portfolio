@@ -25,7 +25,7 @@ export default function ContactMe({}: Props) {
 
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row px-6 sm:px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-16  sm:top-4 uppercase tracking-[10px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
+      <h3 className="absolute hide-on-short780px top-16  sm:top-14 uppercase tracking-[10px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
         Contact
       </h3>
 
@@ -51,7 +51,7 @@ export default function ContactMe({}: Props) {
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-full sm:w-fit mx-auto">
-            <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+            <div className=" textsmall800pxh flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
               <input
                 {...register('name')}
                 placeholder="Name"
@@ -69,12 +69,12 @@ export default function ContactMe({}: Props) {
             <input
               {...register('subjetc')}
               placeholder="Subject"
-              className="contactInput w-full"
+              className=" textsmall800pxh contactInput w-full"
               type="text"
             />
 
-            <textarea {...register('message')} placeholder="Message" className="contactInput w-full"></textarea>
-            <button type="submit" className="bg-[#F7AB0A] py-3 sm:py-5 px-8 sm:px-10 rounded-md text-black font-bold">
+            <textarea {...register('message')} placeholder="Message" className="textsmall800pxh contactInput "></textarea>
+            <button type="submit" className="bg-[#F7AB0A] textsmall800pxh py-3 sm:py-5 px-8 sm:px-10 rounded-md text-black font-bold">
               Submit
             </button>
           </form>

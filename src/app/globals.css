@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @media (max-height: 700px) {
+    .hide-on-short700px {
+      @apply hidden;
+    }
+  }
+  @media (max-height: 670px) {
+    .hide-on-short670px {
+      @apply hidden;
+    }
+  }
+  @media (max-height: 780px) {
+    .hide-on-short780px {
+      @apply hidden;
+    }
+  }
+  .textsmall800pxh{
+    width: 100%; /* Tamaño original por defecto */
+    height: auto;
+}
+  
+  .imgsmall800pxh {
+    width: 100%; /* Tamaño original por defecto */
+    height: auto;
+}
+
+@media (max-height: 800px) {
+    .imgsmall800pxh {
+        width: 70%; /* Reduce el ancho al 60% */
+        height: auto; /* Mantiene las proporciones de la imagen */
+    }
+    .textsmall800pxh{
+      width: 60%;
+
+      height: 200px;
+      
+    }
+}
+}
+
 @layer components {
   .heroButton {
     @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest

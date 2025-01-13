@@ -69,7 +69,7 @@ export default function Projects({}: Props) {
             </h3>
 
             <div
-                className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 mt-28 sm:mt-40 lg:mt-16"
+                className="relative  w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 mt-28 sm:mt-40 lg:mt-16"
                 onScroll={handleScroll}
             >
                 {projects.map((project, i) => (
@@ -78,14 +78,14 @@ export default function Projects({}: Props) {
                         className="project-item w-full sm:w-screen flex-shrink-0 snap-center flex flex-col space-y-2 justify-center items-center p-8 sm:p-20 md:p-32 h-[70%] sm:h-[75%] md:h-screen"
                     >
                         <motion.img
-                            initial={{ y: -50, opacity: 0 }}
-                            transition={{ duration: 1.2 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true }}
-                            src={project.image}
-                            alt={`Project ${i + 1}`}
-                            className="w-96 h-96 sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] rounded-lg object-cover transform sm:-translate-x-[20px]"
-                        />
+    initial={{ y: -50, opacity: 0 }}
+    transition={{ duration: 1.2 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    src={project.image}
+    alt={`Project ${i + 1}`}
+    className=" imgsmall800pxh w-72 h-72 sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-lg object-cover transform sm:-translate-x-[20px]"
+/>
 
                         <div className="space-y-12 px-4 sm:px-8 md:px-10 max-w-4xl text-center mt-8">
                             <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
@@ -102,7 +102,7 @@ export default function Projects({}: Props) {
                             </h1>
 
                             {/* Navigation Dots */}
-                            <div className="flex space-x-3 justify-center mt-4">
+                            <div className="flex hide-on-short700px space-x-3 justify-center mt-4">
                                 {projects.map((_, index) => (
                                     <motion.div
                                         key={index}

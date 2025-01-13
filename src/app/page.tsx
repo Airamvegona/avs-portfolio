@@ -62,7 +62,7 @@ export default function Home({
 
       {/* Footer */}
       <footer className="sticky bottom-5 w-full cursor-pointer z-10">
-        <div className="flex justify-center  items-center">
+        <div className="flex justify-center p-4 items-center">
           <Image
             className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition-all duration-300 hover:h-12 hover:w-12 hover:bg-[#F7AB0A]"
             src="/logo.png"

@@ -180,7 +180,7 @@ export default function WorkExperience() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-2 space-x-3 ">
+        <div className=" hide-on-short670px flex justify-center mt-2 space-x-3 ">
           {experiences.map((_, index) => (
             <motion.div 
               key={index}

@@ -51,7 +51,7 @@ export default function ContactMe({}: Props) {
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-full sm:w-fit mx-auto">
-            <div className=" textsmall800pxh flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
               <input
                 {...register('name')}
                 placeholder="Name"
@@ -69,12 +69,12 @@ export default function ContactMe({}: Props) {
             <input
               {...register('subjetc')}
               placeholder="Subject"
-              className=" textsmall800pxh contactInput w-full"
+              className="contactInput w-full"
               type="text"
             />
 
-            <textarea {...register('message')} placeholder="Message" className="textsmall800pxh contactInput "></textarea>
-            <button type="submit" className="bg-[#F7AB0A] textsmall800pxh py-3 sm:py-5 px-8 sm:px-10 rounded-md text-black font-bold">
+            <textarea {...register('message')} placeholder="Message" className="contactInput w-full"></textarea>
+            <button type="submit" className="bg-[#F7AB0A] py-3 sm:py-5 px-8 sm:px-10 rounded-md text-black font-bold">
               Submit
             </button>
           </form>

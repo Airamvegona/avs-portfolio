@@ -41,7 +41,7 @@ export default function ExperienceCard({
         alt={`${company} Logo`}
       />
 
-      <div className="px-2 sm:px-8 w-full">
+      <div className="px-2 sm:px-1 w-full">
         <h4 className="text-lg sm:text-xl md:text-2xl font-light text-center">{role}</h4>
         <p className="font-bold text-base sm:text-lg md:text-xl mt-1 text-center">
           {company}
@@ -57,7 +57,7 @@ export default function ExperienceCard({
           {startDate} - {endDate}
         </p>
 
-        <ul className="list-disc space-y-2 sm:space-y-4 hidden sm:block ml-5 sm:visible text-xs sm:text-sm sm:h-40 md:h-56 overflow-y-auto pr-3 sm:pr-5">
+        <ul className="list-disc space-y-2 sm:space-y-2 hidden sm:block ml-5 sm:visible text-xs sm:text-sm sm:h-26 md:h-40 overflow-y-auto pr-3 sm:pr-5">
           {points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}

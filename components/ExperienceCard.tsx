@@ -1,5 +1,7 @@
-import React from 'react';
+"use client"
+
 import { motion } from 'framer-motion';
+import React from 'react';
 
 type Props = {
   role: string;
@@ -21,40 +23,35 @@ export default function ExperienceCard({
   logoUrl,
 }: Props) {
   return (
-    <article
-      className='flex flex-col rounded-lg items-center space-y-4 flex-shrink-0 
-      w-[300px] md:w-[400px] xl:w-[500px] snap-center bg-[#292929] p-6 
-      hover:opacity-100 md:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'
-    >
-      {/* Imagen animada */}
+    <article className='relative flex flex-col rounded-lg items-center space-y-4 
+      w-[600px] h-[500px] sm:h-[600px] snap-center bg-[#292929] p-8 
+      hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
+      border border-gray-800'>
       <motion.img
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className='w-24 h-24 xl:w-[150px] xl:h-[150px] rounded-full object-cover object-center'
+        className='w-24 h-24 rounded-full object-cover object-center'
         src={logoUrl}
         alt={`${company} Logo`}
       />
 
-      {/* Contenido */}
-      <div className='px-0 md:px-6 text-center md:text-left'>
-        <h4 className='text-2xl font-light'>{role}</h4>
-        <p className='font-bold text-xl mt-1'>{company}</p>
+      <div className='px-0 md:px-10 w-full'>
+        <h4 className='text-2xl font-light text-center'>{role}</h4>
+        <p className='font-bold text-xl mt-1 text-center'>{company}</p>
 
-        {/* Logos de tecnologías */}
-        <div className='flex justify-center md:justify-start space-x-2 my-2'>
-          {technologies.map((TechIcon, index) => (
-            <div key={index}>{TechIcon}</div>
+        <div className='flex justify-center space-x-2 my-4'>
+          {technologies.map((tech, index) => (
+            <div key={index}>{tech}</div>
           ))}
         </div>
 
-        <p className='uppercase py-3 text-gray-300 text-sm'>
-          Started: {startDate} - Ended: {endDate}
+        <p className='uppercase py-3 text-gray-300 text-sm text-center'>
+          {startDate} - {endDate}
         </p>
 
-        {/* Puntos resumidos */}
-        <ul className='list-disc space-y-3 ml-5 text-base text-left hidden md:block'>
+        <ul className='list-disc space-y-4 hidden sm:block ml-5 sm:visible text-sm sm:h-56 overflow-y-auto pr-5'>
           {points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}

@@ -9,28 +9,13 @@ import WorkExperience from "../../components/WorkExperience";
 import Skills from "../../components/Skills";
 import Projects from "../../components/Projects";
 import ContactMe from "../../components/ContactMe";
-import { InferGetServerSidePropsType, GetServerSideProps, GetStaticProps } from "next";
-import { PageInfo, Skill, Project, Experience, Social } from "../../typings";
-import { fetchPageInfo } from "../../utils/fetchPageInfo";
-import { fetchExperiences } from "../../utils/fetchExperiences";
-import { fetchSkills } from "../../utils/fetchSkills";
-import { fetchProjects } from "../../utils/fetchProjects";
-import { fetchSocials } from "../../utils/fetchSocials";
 
 type Props = {
-  pageInfo: PageInfo;
-  skills: Skill[];
-  projects: Project[];
-  experiences: Experience[];
-  socials: Social[];
+
 };
 
 export default function Home({
-  pageInfo,
-  skills,
-  projects,
-  experiences,
-  socials,
+ 
 }: Props) {
   return (
     

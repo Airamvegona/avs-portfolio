@@ -86,40 +86,40 @@ export default function Projects({}: Props) {
     alt={`Project ${i + 1}`}
     className=" imgsmall800pxh w-72 h-72 sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-lg object-cover transform sm:-translate-x-[20px]"
 />
+<div className="space-y-8 px-4 sm:px-8 md:px-10 max-w-4xl text-center mt-8 ">
+    <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+        {project.title}
+    </h4>
+    <p className="text-sm sm:text-base md:text-lg text-gray-400">
+        {project.description}
+    </p>
 
-                        <div className="space-y-12 px-4 sm:px-8 md:px-10 max-w-4xl text-center mt-8">
-                            <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-                                {project.title}
-                            </h4>
-                            <p className="text-sm sm:text-base md:text-lg text-gray-400">
-                                {project.description}
-                            </p>
+    <h1 className="text-xl sm:text-2xl text-[#F7AB0A] mb-4">
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+        </a>
+    </h1>
 
-                            <h1 className="text-xl sm:text-2xl text-[#F7AB0A] mb-4">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                    View on GitHub
-                                </a>
-                            </h1>
+    {/* Navigation Dots */}
+    <div className="flex hide-on-short700px space-x-3 justify-center mt-4 sm:-mt-6">
+        {projects.map((_, index) => (
+            <motion.div
+                key={index}
+                className={`cursor-pointer rounded-full w-3 h-3 ${
+                    index === currentProject ? 'bg-[#F7AB0A]' : 'bg-gray-500'
+                }`}
+                onClick={() => handleDotClick(index)}
+                whileHover={{ scale: 1.2 }}
+                animate={{
+                    backgroundColor: index === currentProject ? '#F7AB0A' : '#6B7280',
+                    scale: index === currentProject ? 1.2 : 1,
+                }}
+                transition={{ duration: 0.2 }}
+            />
+        ))}
+    </div>
+</div>
 
-                            {/* Navigation Dots */}
-                            <div className="flex hide-on-short700px space-x-3 justify-center mt-4">
-                                {projects.map((_, index) => (
-                                    <motion.div
-                                        key={index}
-                                        className={`cursor-pointer rounded-full w-3 h-3 ${
-                                            index === currentProject ? 'bg-[#F7AB0A]' : 'bg-gray-500'
-                                        }`}
-                                        onClick={() => handleDotClick(index)}
-                                        whileHover={{ scale: 1.2 }}
-                                        animate={{
-                                            backgroundColor: index === currentProject ? '#F7AB0A' : '#6B7280',
-                                            scale: index === currentProject ? 1.2 : 1,
-                                        }}
-                                        transition={{ duration: 0.2 }}
-                                    />
-                                ))}
-                            </div>
-                        </div>
                     </div>
                 ))}
             </div>

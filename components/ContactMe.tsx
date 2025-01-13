@@ -29,7 +29,7 @@ export default function ContactMe({}: Props) {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-6 sm:space-y-10 mt-20 sm:mt-0">
+      <div className="flex flex-col space-y-6 mb-14 sm:space-y-10 mt-20 sm:mt-0">
         <h4 className="text-2xl sm:text-4xl font-semibold text-center">
           I have what you need.{" "}
           <span className="underline decoration-[#F7AB0A]/50">Let's talk</span>

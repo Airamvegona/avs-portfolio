@@ -116,7 +116,7 @@ export default function Header({ }: Props) {
                             <span>LinkedIn</span>
                         </a>
                         <a
-                            href="https://drive.google.com/file/d/1CiZqqH4S5PeG12zJK8-4K7jVDgCGAL17/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1eD2Oc5JBReUYwJnLSsKEOC5fvjDNxHWM/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center space-x-2 hover:text-[#F7AB0A] transition duration-300"

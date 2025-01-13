@@ -25,7 +25,7 @@ export default function ExperienceCard({
   return (
     <article className='relative flex flex-col rounded-lg items-center space-y-4 
       w-[600px] h-[500px] sm:h-[600px] snap-center bg-[#292929] p-8 
-      hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200
+      hover:opacity-100 sm:opacity-40 cursor-pointer transition-opacity duration-200
       border border-gray-800'>
       <motion.img
         initial={{ y: -100, opacity: 0 }}

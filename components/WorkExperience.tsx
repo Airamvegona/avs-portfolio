@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useState, UIEvent } from "react";
+import React, { useState, UIEvent, useEffect } from "react";
 import ExperienceCard from "./ExperienceCard";
 import {
   SiMongodb,
@@ -21,6 +21,7 @@ import {
 
 export default function WorkExperience() {
   const [currentExperience, setCurrentExperience] = useState(0);
+  const [itemWidth, setItemWidth] = useState(0);
   const experiences = 
     [
       {
@@ -65,6 +66,7 @@ export default function WorkExperience() {
           />,
           <FaJsSquare size={40} className='text-yellow-400' title='JavaScript' />,
           <FaGitAlt size={40} className='text-red-500' title='Git' />,
+          
         ],
         points: [
           'Led a team of 2 in a Scrum environment for a 2-month project with client Alcampo.',
@@ -115,23 +117,40 @@ export default function WorkExperience() {
         logoUrl: '/quatu.png', // Cambia por el logo oficial de QUATU si tienes la URL.
       },
    
-  ];
+  ];useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) { // Para pantallas móviles
+        setItemWidth(window.innerWidth / 1.5);
+      } else { // Para pantallas de escritorio
+        setItemWidth(window.innerWidth / 5);
+      }
+    };
+    
+    // Escuchar el cambio de tamaño de la ventana
+    window.addEventListener('resize', handleResize);
+    
+    // Llamar a handleResize para establecer el valor inicial
+    handleResize();
+
+    // Limpiar el evento cuando se desmonte el componente
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleDotClick = (index: number) => {
     setCurrentExperience(index); // Actualiza el estado actual del proyecto
     const elements = document.querySelectorAll('.experience-item'); // Asegúrate de que los elementos tengan esta clase
     elements[index]?.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Desplazamiento suave
   };
-  
+
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const container = e.currentTarget; // Contenedor de scroll
     const scrollPosition = container.scrollLeft; // Posición del scroll
-    const itemWidth = container.offsetWidth / 2.5; // Ajuste para asegurar que en escritorio se calcule correctamente el índice
     const newIndex = Math.round(scrollPosition / itemWidth); // Calcula el índice actual
     if (newIndex !== currentExperience) {
       setCurrentExperience(newIndex); // Actualiza el índice si ha cambiado
     }
   };
-  
+
   return (
     <div className="h-screen relative flex flex-col items-center">
       <motion.div
@@ -143,7 +162,7 @@ export default function WorkExperience() {
         <h3 className="uppercase tracking-[16px]  text-gray-500 text-2xl text-center mb-4 pt-14">
           Experience
         </h3>
-  
+
         <div
           className="experience-scroll-container w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory 
             scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 z-20"
@@ -160,7 +179,7 @@ export default function WorkExperience() {
             ))}
           </div>
         </div>
-  
+
         <div className="flex justify-center mt-2 space-x-3 ">
           {experiences.map((_, index) => (
             <motion.div 
@@ -182,5 +201,4 @@ export default function WorkExperience() {
       </motion.div>
     </div>
   );
-  
 }

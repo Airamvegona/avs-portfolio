@@ -42,32 +42,34 @@ export default function Projects({}: Props) {
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
-            className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+            className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 mt-16 sm:mt-28"
         >
             {/* Título */}
-            <h3 className="absolute top-20 sm:top-28 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl z-30">
-                Projects
-            </h3>
+            <h3 className="absolute top-16 sm:top-32 uppercase tracking-[28px] text-gray-500 text-xl sm:text-2xl z-30 transform md:-translate-x-[0px] sm:-translate-x-[16px]">
+    Projects
+</h3>
+
+
 
             {/* Contenedor de proyectos */}
             <div
-                className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 mt-20 sm:mt-36"
+                className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 mt-28 sm:mt-40"
             >
                 {projects.map((project, i) => (
                     <div
                         key={i}
                         className="w-[90%] sm:w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-8 sm:p-20 md:p-32 h-[70%] sm:h-[75%] md:h-screen"
                     >
-                        {/* Imagen del proyecto */}
-                        <motion.img
-                            initial={{ y: -50, opacity: 0 }} // Reducido para evitar desbordamiento
-                            transition={{ duration: 1.2 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true }}
-                            src={project.image}
-                            alt={`Project ${i + 1}`}
-                            className="w-96 h-96 sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] rounded-lg object-cover"
-                        />
+                       <motion.img
+    initial={{ y: -50, opacity: 0 }}
+    transition={{ duration: 1.2 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    src={project.image}
+    alt={`Project ${i + 1}`}
+    className="w-96 h-96 sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] rounded-lg object-cover transform sm:-translate-x-[20px]"
+/>
+
 
                         {/* Detalles del proyecto */}
                         <div className="space-y-6 px-4 sm:px-8 md:px-10 max-w-4xl text-center">

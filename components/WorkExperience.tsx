@@ -115,28 +115,27 @@ export default function WorkExperience() {
 
   return (
     <motion.div
-  initial={{ opacity: 0 }}
-  transition={{ duration: 1.5 }}
-  whileInView={{ opacity: 1 }}
-  className='relative flex flex-col text-left md:flex-row max-w-full px-52 
-  justify-evenly mx-auto items-center overflow-hidden'
->
-  {/* Título */}
-  <h3 className='absolute top-20 sm:top-2 uppercase tracking-[20px]
-      text-gray-500 text-xl sm:text-2xl'>
-    Experience
-  </h3>
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1 }}
+      className='relative flex flex-col text-left md:flex-row max-w-full px-52 
+      justify-evenly mx-auto items-center overflow-hidden'
+    >
+      {/* Título */}
+      <h3 className='absolute top-20 md:top-24 uppercase tracking-[15px] md:tracking-[20px]
+        text-gray-500 text-xl md:text-2xl'>
+        Experience
+      </h3>
 
-  {/* Contenedor de tarjetas */}
-  <div
-    className='w-full flex space-x-28 overflow-x-scroll overflow-y-hidden p-32 snap-x snap-mandatory 
-    scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'
-  >
-    {experiences.map((exp, index) => (
-      <ExperienceCard key={index} {...exp} />
-    ))}
-  </div>
-</motion.div>
-
+      {/* Contenedor de tarjetas */}
+      <div
+        className='w-full flex space-x-28 overflow-x-scroll overflow-y-hidden p-32 snap-x snap-mandatory 
+        scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'
+      >
+        {experiences.map((exp, index) => (
+          <ExperienceCard key={index} {...exp} />
+        ))}
+      </div>
+    </motion.div>
   );
 }

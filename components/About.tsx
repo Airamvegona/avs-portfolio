@@ -9,14 +9,9 @@ export default function About({ }: Props) {
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
-
-            className="flex flex-col relative h-screen text-center md:text-left
-           md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center 
-           "
-
+            className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
         >
-            <h3 className='absolute top-24 uppercase tracking-[20px]
-       text-gray-500 text-2xl'>
+            <h3 className='absolute top-12 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
                 About
             </h3>
 
@@ -25,7 +20,6 @@ export default function About({ }: Props) {
                     x: -200,
                     opacity: 0
                 }}
-
                 transition={{ duration: 1.2 }}
                 whileInView={{
                     opacity: 1,
@@ -33,13 +27,15 @@ export default function About({ }: Props) {
                 }}
                 viewport={{ once: true }}
                 src="/IMG_1490.PNG"
-                className="rounded-full -mb-20 md:mb-0 flex-shrink-0 w-56 h-56  object-cover
-       md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px]"
+                className="rounded-full -mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px]"
             />
-            <div className='space-y-10 px-0 md:px-10'>
+            <div className='space-y-10 px-0 md:px-10 mt-10 sm:mt-5'>
                 <h4 className='text-4xl font-semibold'>
-                    <span className='underline decoration-[#F7AB0A]'>About</span> me {" "}</h4>
-                <p className='text-base'>Passionate Software Developer with a lifelong love for technology, currently based in Switzerland. What sets me apart is my creativity and problem-solving skills, making me an ideal candidate for top-tier companies. I thrive in building innovative and efficient software, always striving to deliver impactful solutions while continuously growing and evolving.</p>
+                    <span className='underline decoration-[#F7AB0A]'>About</span> me
+                </h4>
+                <p className='text-base'>
+                    Passionate Software Developer with a lifelong love for technology, currently based in Switzerland. What sets me apart is my creativity and problem-solving skills, making me an ideal candidate for top-tier companies. I thrive in building innovative and efficient software, always striving to deliver impactful solutions while continuously growing and evolving.
+                </p>
             </div>
         </motion.div>
     )

@@ -15,6 +15,7 @@ interface SanityBody {
     }
 
     export interface PageInfo extends SanityBody {
+        title: ReactI18NextChildren | Iterable<ReactI18NextChildren>;
 
         _type: 'pageInfo';
         backgroundInformation: string;

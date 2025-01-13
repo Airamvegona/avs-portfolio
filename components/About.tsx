@@ -32,14 +32,14 @@ export default function About({ }: Props) {
                     x: 0
                 }}
                 viewport={{ once: true }}
-                src="/mi cara.png"
+                src="/IMG_1490.PNG"
                 className="rounded-full -mb-20 md:mb-0 flex-shrink-0 w-56 h-56  object-cover
-       md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+       md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px]"
             />
             <div className='space-y-10 px-0 md:px-10'>
                 <h4 className='text-4xl font-semibold'>
                     <span className='underline decoration-[#F7AB0A]'>About</span> me {" "}</h4>
-                <p className='text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus ea tempora excepturi illo consequatur iure velit ipsum ex ullam, tenetur doloremque, molestias sapiente vero dolore itaque quasi est commodi!</p>
+                <p className='text-base'>Passionate Software Developer with a lifelong love for technology, currently based in Switzerland. What sets me apart is my creativity and problem-solving skills, making me an ideal candidate for top-tier companies. I thrive in building innovative and efficient software, always striving to deliver impactful solutions while continuously growing and evolving.</p>
             </div>
         </motion.div>
     )

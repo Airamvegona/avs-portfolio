@@ -48,7 +48,7 @@ export default function Header({ }: Props) {
 
                 {/* PDF Download */}
                 <a
-                    href="https://drive.google.com/file/d/1CiZqqH4S5PeG12zJK8-4K7jVDgCGAL17/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1eD2Oc5JBReUYwJnLSsKEOC5fvjDNxHWM/view"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-red-500 transition duration-300"

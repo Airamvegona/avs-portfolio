@@ -48,7 +48,7 @@ export default function Header({ }: Props) {
 
                 {/* PDF Download */}
                 <a
-                    href="https://drive.google.com/file/d/1eD2Oc5JBReUYwJnLSsKEOC5fvjDNxHWM/view"
+                    href="https://drive.google.com/file/d/1IBAqEpB7aK4b7VAPjbZhuW7GE4t2SuzV/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-red-500 transition duration-300"
@@ -116,7 +116,7 @@ export default function Header({ }: Props) {
                             <span>LinkedIn</span>
                         </a>
                         <a
-                            href="https://drive.google.com/file/d/1eD2Oc5JBReUYwJnLSsKEOC5fvjDNxHWM/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1IBAqEpB7aK4b7VAPjbZhuW7GE4t2SuzV/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center space-x-2 hover:text-[#F7AB0A] transition duration-300"
